@@ -13,7 +13,6 @@ function App() {
       <Navbar mousable={mousable} />
       <Home mousable={mousable} setMousable={setMousable} />
       {mousable && <About />}
-      
       {mousable && <Contact />}
     </div>
   );
