@@ -1,0 +1,97 @@
+@import './breakpoints.scss';
+
+.test {
+  border-radius: 50%;
+  background: #171717;
+  box-shadow:  10px 10px 20px #111111,
+              -10px -10px 20px #1d1d1d;
+}
+
+.abs-center {
+  top: 50%;  
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.x-center {
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.icon {
+  border-radius: 50%;
+  background: #171717;
+  box-shadow:  2px 2px 4px #111111,
+              -2px -2px 4px #1d1d1d;
+}
+
+.languages {
+  @include media('>smallscreen') {
+    min-width: 435px;
+    height: 440px;
+  }
+  
+
+  @include media('<=smallscreen') {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 18px;
+  }
+
+  @include media('<=phone') {
+    font-size: smaller;
+  }
+}
+
+.other-box {
+  min-height: 440px;
+  @include media('<=smallscreen') {
+    width: 100%;
+  }
+}
+
+.aboutme {
+  height: 400px;
+  margin-bottom: 118px;
+}
+
+.skills {
+  display: flex;
+  margin-top: -187px;
+
+  @include media('<=smallscreen') {
+    flex-direction: column;
+    height: fit-content;
+    margin-top: 40px;
+  }
+}
+
+.contacts {
+  width: 100%;
+  display: flex;
+  width: fit-content;
+
+  @include media ('<=smallscreen') {
+    justify-content: center;
+  }
+}
+
+.contact-header {
+  @include media ('<=smallscreen') {
+    text-align: center;
+    left: 50%; 
+    transform: translate(-50%, 0%);
+  }
+}
+
+.about {
+  @include media ('<=smallscreen') {
+    height: fit-content;
+  }
+}
+
+.method {
+  width: 200px;
+  text-align: center;
+  height: 100px;
+}
